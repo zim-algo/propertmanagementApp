@@ -1,0 +1,517 @@
+{
+	"info": {
+		"_postman_id": "3e44775f-aff3-470a-9b46-e6b8d120ea8e",
+		"name": "WAA_Offer_Manipulation_Favourites",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31266719"
+	},
+	"item": [
+		{
+			"name": "Make offer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjdXN0b21lckBtYWlsLmNvbSIsImlhdCI6MTcwNzI3MDM2MywiZXhwIjoxNzA3MzU2NzYzfQ.nGT4vOnza-VCWLbZ8FaTr1XoEzznXTG2w3CML-_bNAE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"offerAmount\": 2000.0,\n    \"offerType\": \"CASH\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/properties/1/offers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"properties",
+						"1",
+						"offers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update offer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjdXN0b21lckBtYWlsLmNvbSIsImlhdCI6MTcwNzI1OTM4MSwiZXhwIjoxNzA3MzQ1NzgxfQ.jyPMfmGxrpKT4vJfqQlRShKo1uyBx8QDi8nSuRqtZyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"offerAmount\": 2000.0,\n    \"offerType\": \"CASH\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/customers/properties/1/offer-update",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"properties",
+						"1",
+						"offer-update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Like property",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjdXN0b21lckBtYWlsLmNvbSIsImlhdCI6MTcwNzI1OTM4MSwiZXhwIjoxNzA3MzQ1NzgxfQ.jyPMfmGxrpKT4vJfqQlRShKo1uyBx8QDi8nSuRqtZyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/customers/properties/1/like",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"properties",
+						"1",
+						"like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unlike property",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjdXN0b21lckBtYWlsLmNvbSIsImlhdCI6MTcwNzI3MDM2MywiZXhwIjoxNzA3MzU2NzYzfQ.nGT4vOnza-VCWLbZ8FaTr1XoEzznXTG2w3CML-_bNAE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/properties/1/unlike",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"properties",
+						"1",
+						"unlike"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete offer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjdXN0b21lckBtYWlsLmNvbSIsImlhdCI6MTcwNzI3MDM2MywiZXhwIjoxNzA3MzU2NzYzfQ.nGT4vOnza-VCWLbZ8FaTr1XoEzznXTG2w3CML-_bNAE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/properties/1/offers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"properties",
+						"1",
+						"offers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accept offer (Owner)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvd253ZXJAbWFpbC5jb20iLCJpYXQiOjE3MDcyNzEyODgsImV4cCI6MTcwNzM1NzY4OH0.GRQrszGyP0cboSYofS77-b7zX0BePE8sfrkmVZYtcj4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/properties/1/offers/3/accept",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"properties",
+						"1",
+						"offers",
+						"3",
+						"accept"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reject offer (Owner)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvd253ZXJAbWFpbC5jb20iLCJpYXQiOjE3MDcyNzEyODgsImV4cCI6MTcwNzM1NzY4OH0.GRQrszGyP0cboSYofS77-b7zX0BePE8sfrkmVZYtcj4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/properties/1/offers/3/reject",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"properties",
+						"1",
+						"offers",
+						"3",
+						"reject"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Make Contingent (Owner)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvd253ZXJAbWFpbC5jb20iLCJpYXQiOjE3MDcyNzEyODgsImV4cCI6MTcwNzM1NzY4OH0.GRQrszGyP0cboSYofS77-b7zX0BePE8sfrkmVZYtcj4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/properties/1/offers/3/accept/make-contingent",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"properties",
+						"1",
+						"offers",
+						"3",
+						"accept",
+						"make-contingent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel Contingent (Owner)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvd253ZXJAbWFpbC5jb20iLCJpYXQiOjE3MDcyNzEyODgsImV4cCI6MTcwNzM1NzY4OH0.GRQrszGyP0cboSYofS77-b7zX0BePE8sfrkmVZYtcj4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/properties/1/offers/3/accept/make-contingent",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"properties",
+						"1",
+						"offers",
+						"3",
+						"accept",
+						"make-contingent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get favourite properties by Customer",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvd253ZXJAbWFpbC5jb20iLCJpYXQiOjE3MDcyNzEyODgsImV4cCI6MTcwNzM1NzY4OH0.GRQrszGyP0cboSYofS77-b7zX0BePE8sfrkmVZYtcj4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/properties/favourite-properties",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"properties",
+						"favourite-properties"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get offers by Customer",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjdXN0b21lckBtYWlsLmNvbSIsImlhdCI6MTcwNzMyNjI4NSwiZXhwIjoxNzA3NDEyNjg1fQ.I_oZbiecQvVqyi9Xw7PCO_0ApcixI7k5AAHcm7gk7OA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/properties/offers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"properties",
+						"offers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create new property",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiT1dORVIiLCJzdWIiOiJvd253ZXJAbWFpbC5jb20iLCJpYXQiOjE3MDczNjUwNjEsImV4cCI6MTcwNzQ1MTQ2MX0.EyMgnq2vvpDeCdnprvTgFWhu-uwMgxqGPoQXmYfKnvY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2,\n    \"name\": \"Cozy Cottage\",\n    \"description\": \"A charming cottage in the countryside.\",\n    \"price\": 300000.0,\n    \"status\": \"AVAILABLE\",\n    \"listingType\": \"SALE\",\n    \"propertyType\": \"HOUSE\",\n    \"bathRooms\": 2,\n    \"bedRooms\": 3,\n    \"address\": {\n        \"id\": 3,\n        \"line1\": \"123 Country Lane\",\n        \"line2\": \"124 County Lane\",\n        \"city\": \"Fairfield\",\n        \"postalCode\": \"52556\",\n        \"state\": \"Iowa\",\n        \"country\": \"USA\"\n    },\n    \"imageUrl\": \"image_url.jpg\",\n    \"constructionDate\": \"2010-01-01\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/properties/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"properties",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,356 @@
+{
+	"info": {
+		"_postman_id": "97314977-359e-4287-9ec9-cd7029a4de34",
+		"name": "Property Management APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31266719"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/api/v1/properties",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/v1/properties/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/properties/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"properties",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/v1/properties/create",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvd253ZXJAbWFpbC5jb20iLCJpYXQiOjE3MDczNjMzMDYsImV4cCI6MTcwNzQ0OTcwNn0.wZLdZnT_GeDzhLcwY2qq-oNNGOcTdYxge5vilKio5kY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Cozy Cottage\",\n  \"description\": \"A charming cottage in the countryside.\",\n  \"price\": 300000,\n  \"status\": \"AVAILABLE\",\n  \"listingType\": \"SALE\",\n  \"propertyType\": \"HOUSE\",\n  \"bathRooms\": 2,\n  \"bedRooms\": 3,\n  \"address\": {\n    \"line1\": \"123 Country Lane\",\n    \"line2\" :\"124 County Lane\",\n    \"city\": \"Fairfield\",\n    \"state\": \"Iowa\",\n    \"postalCode\": \"52556\",\n    \"country\": \"USA\"\n  },\n  \"imageUrl\": \"image_url.jpg\",\n  \"constructionDate\": \"2010-01-01\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/properties/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"properties",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/v1/properties/update/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvd253ZXJAbWFpbC5jb20iLCJpYXQiOjE3MDczNjUxMzksImV4cCI6MTcwNzQ1MTUzOX0.6tRUaW3UsuQX3Lc5dyRFI4uH2ue2vLTPMIzaxBqijys",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Updated Cozy Cottage\",\n  \"description\": \"A newly renovated cottage.\",\n  \"price\": 320000,\n  \"bathRooms\": 2,\n  \"bedRooms\": 4,\n  \"address\": {\n    \"line1\": \"123 Country Lane\",\n    \"line2\": \"116 Country Lane\",\n    \"city\": \"Fairfield\",\n    \"state\": \"Iowa\",\n    \"postalCode\": \"52556\",\n    \"country\": \"USA\"\n  },\n  \"imageUrl\": \"updated_image_url.jpg\",\n  \"constructionDate\": \"2010-01-01\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/properties/update/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"properties",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/v1/properties/delete/1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/properties/delete/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"properties",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/v1/properties/1/offers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"offerAmount\": 250000,\n  \"offerType\": \"CASH\",\n  \"offerDate\": \"2024-02-07T12:00:00\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/properties/1/offers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"properties",
+						"1",
+						"offers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Property By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/properties/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"properties",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Properties",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvd253ZXJAbWFpbC5jb20iLCJpYXQiOjE3MDczNjEyODUsImV4cCI6MTcwNzQ0NzY4NX0.k_fxR0fA69vDQn2nHH8GuXtqeKuDpJNDEEhaW5rCckg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/properties/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"properties",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create A Property",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvd253ZXJAbWFpbC5jb20iLCJpYXQiOjE3MDczNjQ1NzEsImV4cCI6MTcwNzQ1MDk3MX0.TCMO1wj_nzxxUi3b37LC1GEoPNKLtdj-VVUqjWkVrO8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Cozy Cottage\",\n  \"description\": \"A charming cottage in the countryside.\",\n  \"price\": 300000,\n  \"status\": \"AVAILABLE\",\n  \"listingType\": \"SALE\",\n  \"propertyType\": \"HOUSE\",\n  \"bathRooms\": 2,\n  \"bedRooms\": 3,\n  \"address\": {\n    \"line1\": \"123 Country Lane\",\n    \"line2\" :\"124 County Lane\",\n    \"city\": \"Fairfield\",\n    \"state\": \"Iowa\",\n    \"postalCode\": \"52556\",\n    \"country\": \"USA\"\n  },\n  \"imageUrl\": \"image_url.jpg\",\n  \"constructionDate\": \"2010-01-01\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/properties/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"properties",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Property By Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvd253ZXJAbWFpbC5jb20iLCJpYXQiOjE3MDczNjUxMzksImV4cCI6MTcwNzQ1MTUzOX0.6tRUaW3UsuQX3Lc5dyRFI4uH2ue2vLTPMIzaxBqijys",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Updated Cozy Cottage\",\n  \"description\": \"A newly renovated cottage.\",\n  \"price\": 320000,\n  \"bathRooms\": 2,\n  \"bedRooms\": 4,\n  \"address\": {\n    \"line1\": \"123 Country Lane\",\n    \"line2\": \"116 Country Lane\",\n    \"city\": \"Fairfield\",\n    \"state\": \"Iowa\",\n    \"postalCode\": \"52556\",\n    \"country\": \"USA\"\n  },\n  \"imageUrl\": \"updated_image_url.jpg\",\n  \"constructionDate\": \"2010-01-01\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/properties/update/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"properties",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Make an Offer Against for a given Property",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjdXN0b21lckBtYWlsLmNvbSIsImlhdCI6MTcwNzM2NTk5MiwiZXhwIjoxNzA3NDUyMzkyfQ.En5tdaXeaD7dW-S7dki9lw8HWDNBhaIn7rqJidpUg2Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"offerAmount\": 250000,\n  \"offerType\": \"CASH\",\n  \"offerDate\": \"2024-02-07T12:00:00\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/properties/1/offers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"properties",
+						"1",
+						"offers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
