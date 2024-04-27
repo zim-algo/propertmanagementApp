@@ -2,7 +2,6 @@
 
 Property management portal is a web-based java project where house owners and customers can exchange information effectively and inexpensively. This system provides a user-friendly interface, satisfying the needs of the consumers.
 
-To get a better understanding of the project, check out zillow.com.
 
 There are four roles in this system: Owner, Admin, Customer, and Viewer.
 - The viewer is the user who can only search and display properties. (Unregistered users)
@@ -15,17 +14,13 @@ Dashboard Page for admins:
 - Display 10 most recent customers.
 - Add more features as you see fit.
 
-Dashboard Page for owners:
-- Display properties.
-- Display total views of the properties per location.
-- Add more features as you see fit.
 
 ####  Functional  Requirements
 --- 
 * Owners/Customers can register to the system.
 * Owners can add properties.
     * Can upload pictures of the property.
-    * Optional: Use cloud services like Amazon S3 or Google Cloud Storage.
+    * Optional: Use cloud services like Microsoft Azure, Amazon S3 or Google Cloud Storage.
 * Owners can see their own properties and manage them.
     * Can unlist, and edit the property.
 * Owners and Customers can filter properties:
